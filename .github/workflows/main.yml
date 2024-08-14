@@ -27,10 +27,9 @@ jobs:
     - name: Deploy to FTP server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./ # Set to the directory you want to deploy
         server-dir: /htdocs # Set to the directory on your server where files should be uploaded
         port: ${{ secrets.FTP_PORT }} # Optional, if using a non-standard port
-        method: ftp # Change to sftp if you're using SFTP
