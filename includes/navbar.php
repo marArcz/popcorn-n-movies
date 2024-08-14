@@ -20,7 +20,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="movies.php?title=Top rated&category=top_rated">Top rated</a>
                 </li>
-
+                <li class="nav-item">
+                    <a class="nav-link" href="movies.php?title=PH Movies&with_origin_country=PH">PH Movies</a>
+                </li>
             </ul>
             <form class="d-flex" action="search.php" role="search">
                 <input name="keyword" required class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -39,7 +41,7 @@
                 ?>
                 <?php foreach ($genres['genres'] as $genre): ?>
                     <li class="nav-item">
-                        <a class="nav-link link-light active" href="movies.php?title=<?= $genre['name']. ' Movies' ?>&genre=<?= $genre['id'] ?>"><?= $genre['name'] ?></a>
+                        <a class="nav-link link-light active" href="movies.php?title=<?= $genre['name']. ' Movies' ?>&with_genres=<?= $genre['id'] ?>"><?= $genre['name'] ?></a>
                     </li>
                 <?php endforeach ?>
             </ul>

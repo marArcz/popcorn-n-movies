@@ -22,7 +22,8 @@
 .text-title {
     font-size: 3rem;
 }
-.text-tagline{
+
+.text-tagline {
     font-size: 2rem !important;
 }
 
@@ -30,19 +31,22 @@
     width: 100%;
     position: relative;
 
-    .rating{
+    .rating {
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 0;
         padding: 5px 10px;
     }
+
     &__img {
         width: 100%;
         max-width: 100%;
         height: 300px;
-        border-radius: 10px;
+        border-radius: 5px;
         object-fit: cover;
         transition: 200ms;
+        border: 1px solid rgba(20, 20, 20, 0.498);
+        box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.388);
     }
 
     &__title {
@@ -55,23 +59,50 @@
         text-wrap: nowrap;
     }
 
+    &__overlay {
+        background: linear-gradient(to bottom,rgba(118, 30, 30, 0),rgba(118, 30, 30, 0.518) 50%);   
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: 300ms all ease-in-out;
+    }
+
+    &__play-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(25, 25, 25, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+            i{
+                color:rgb(255, 255, 255); ;
+                font-size: 2rem;
+            }
+    }
+
     // hovered
     &:hover {
-        .movie-card__img {
-            transform: scale(1.05);
+        .movie-card__overlay{
+            opacity: 1;
         }
     }
 }
 
-.video-wrapper{
+.video-wrapper {
     width: 100%;
     height: 70vh;
     position: relative;
     overflow: clip;
 }
 
-.cast-card{
-    img{
+.cast-card {
+    img {
         width: 60px;
         height: 60px;
         object-fit: cover;

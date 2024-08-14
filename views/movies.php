@@ -1,23 +1,22 @@
 <?php
 require_once '../includes/utils.php';
 
-if ((!isset($_GET['genre']) || !isset($_GET['category'])) && !isset($_GET['title'])) {
+if (!isset($_GET['title'])) {
     header('location: index.php');
     exit;
 }
-
+$params = $_GET;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-if (isset($_GET['genre'])) {
-    $genre_id = $_GET['genre'];
-    $movies = getMoviesByGenre($genre_id, $page);
+if (isset($params['category'])) {
+    $movies = getMovieList($params['category']);
 } else {
-    $category = $_GET['category'];
-    $movies = getMovieList($category, $page);
+    $movies = discoverMovies($params);
 }
 
 $totalPages = 500;
 $totalResults = $movies['total_results'];
+
 
 ?>
 <!DOCTYPE html>
@@ -37,28 +36,16 @@ $totalResults = $movies['total_results'];
         <div class="container-lg">
             <h1 class="fs-3 mt-3 text-danger"><?= $_GET['title'] ?></h1>
             <p><?= number_format($totalResults) ?> movies found.</p>
-            <div class="row mt-3 border-box gx-3 gy-3 ">
-                <?php foreach ($movies['results'] as $key => $movie) { ?>
-                    <?php if (!$movie['poster_path']) continue ?>
-                    <div class="col-lg-2 col-md-4 col-6">
-                        <div class="movie-card">
-                            <a href="watch.php?m=<?= $movie['id'] ?>" class="text-light text-decoration-none">
-                                <div class="rating bg-warning rounded text-dark fw-bold z-2 shadow">
-                                    <i class="bx bxs-star text-white"></i>
-                                    <span><?= $movie['vote_average'] ?></span>
-                                </div>
-                                <img loading="lazy" class="movie-card__img" src="<?= getTmdbImage($movie['poster_path'], 'w300') ?>" alt="<?= $movie['title'] ?> poster">
-                                <p class="movie-card__title mt-2"><?= $movie['title'] ?></p>
-                            </a>
-                        </div>
-                    </div>
-                <?php } ?>
+            <div class="mt-2">
+                <?php
+                require '../includes/movie-list.php';
+                ?>
             </div>
         </div>
     </section>
     <?php
     $title = $_GET['title'];
-    $query_params = "?title=$title&" . (isset($_GET['genre']) ? "genre=" . $_GET['genre'] : "category=" . $_GET['category']);
+    $query_params = '?' . http_build_query($params);
     include_once '../includes/pagination.php';
     ?>
 </body>

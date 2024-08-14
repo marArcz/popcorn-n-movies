@@ -102,32 +102,7 @@ function formatRuntime(int $minutes): string
 
 function formatDate($dateString)
 {
-    // Parse the date string into a DateTime object
-    $date = new DateTime($dateString);
-
-    // Array of month names
-    $monthNames = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    ];
-
-    // Extract year, month, and day
-    $year = $date->format('Y');
-    $month = $monthNames[(int)$date->format('n') - 1]; // Get the month name from the array
-    $day = $date->format('j'); // Get the day of the month
-
-    // Format as "Month Day, Year"
-    return "{$month} {$day}, {$year}";
+    return date("M d, Y",strtotime($dateString));
 }
 
 $addToWatch = function ($id) use ($pdo) {
