@@ -1,4 +1,6 @@
 /node_modules
 /vendor
-/env
-/env.example
+/.env
+/.env.example
+/assets/bootstrap
+/assets/boxicons
