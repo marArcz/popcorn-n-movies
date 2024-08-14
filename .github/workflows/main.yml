@@ -31,5 +31,5 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./ # Set to the directory you want to deploy
-        server-dir: /htdocs # Set to the directory on your server where files should be uploaded
+        server-dir: /htdocs/ # Set to the directory on your server where files should be uploaded
         port: ${{ secrets.FTP_PORT }} # Optional, if using a non-standard port
