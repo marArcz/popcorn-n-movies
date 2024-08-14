@@ -5,6 +5,7 @@ declare(strict_types=1);
 use Psr\Http\Message\ResponseInterface;
 
 require_once('../vendor/autoload.php');
+require_once('../conn/conn.php');
 
 const TMDB_API_KEY = "065e1eefaa9a910ce75bf38ae0cad5ae";
 const TMDB_ACCESS_TOKEN = "Bearer " . "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwNjVlMWVlZmFhOWE5MTBjZTc1YmYzOGFlMGNhZDVhZSIsIm5iZiI6MTcyMjk1MzU2Ni4yNDcyOCwic3ViIjoiNjZiMjI5ZjY1NTA0NmNmMjM5ZWI5MmI5Iiwic2NvcGVzIjpbImFwaV9yZWFkIl0sInZlcnNpb24iOjF9.GCRrmN6R4aIjxY5FwaQxi9NiemMCuqcUv0fnDLrpa5Q";
@@ -38,6 +39,13 @@ function getMoviesByGenre(int $genre, int $page = 1): array
 {
     $response = makeRequest("/discover/movie?include_adult=false&include_video=false&sort_by=popularity.desc&with_genres=$genre&page=$page");
 
+    return json_decode((string)$response->getBody(), true);
+}
+
+function discoverMovies(array $options)
+{
+    $params = http_build_query($options);
+    $response = makeRequest("/discover/movie?include_adult=false&include_video=false&" . $params);
     return json_decode((string)$response->getBody(), true);
 }
 
@@ -121,3 +129,22 @@ function formatDate($dateString)
     // Format as "Month Day, Year"
     return "{$month} {$day}, {$year}";
 }
+
+$addToWatch = function ($id) use ($pdo) {
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+
+    $query = $pdo->prepare("INSERT INTO watches(ip_address,agent,movie) VALUES(?,?,?)");
+    return $query->execute([$ipAddress, $userAgent, $id]);
+};
+
+$saveVisits = function () use ($pdo) {
+    $ipAddress = $_SERVER['REMOTE_ADDR'];
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
+    $uri = $_SERVER['REQUEST_URI'];
+
+    $query = $pdo->prepare("INSERT INTO visits(ip_address,agent,page) VALUES(?,?,?)");
+    return $query->execute([$ipAddress, $userAgent, $uri]);
+};
+
+$saveVisits();

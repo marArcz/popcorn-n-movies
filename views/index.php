@@ -29,8 +29,7 @@ $movies = $movies['results'];
                         <button class="btn btn-outline-danger" type="submit">Search</button>
                     </form>
                 </div>
-                <p class="text-sm mt-4 mb-0 text-danger-emphasis">Spread the word and share the fun.</p>
-                <a href="#" class="mt-2 btn btn-dark btn-sm">Share with friends <i class='bx bx-share-alt'></i></a>
+                
                 <!-- <h1 class="text-title"><?= $movies[0]['title'] ?></h1>
                 <p class=" fs-4 text-body-secondary"><?= $movies[0]['overview'] ?></p>
                 <a href="watch.php?m=<?= $movies[0]['id'] ?>" class="mt-3 btn btn-dark btn-lg">Watch now</a> -->

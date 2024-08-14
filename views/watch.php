@@ -7,6 +7,8 @@ require_once '../includes/utils.php';
 $movieId = $_GET['m'];
 
 $movie = getMovie($movieId);
+
+$addToWatch($movieId . '__' . $movie['title']);
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
