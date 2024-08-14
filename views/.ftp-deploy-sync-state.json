@@ -1,0 +1,261 @@
+{
+    "description": "DO NOT DELETE THIS FILE. This file is used to keep track of which files have been synced in the most recent deployment. If you delete this file a resync will need to be done (which can take a while) - read more: https://github.com/SamKirkland/FTP-Deploy-Action",
+    "version": "1.0.0",
+    "generatedTime": 1723654257168,
+    "data": [
+        {
+            "type": "folder",
+            "name": ".vscode"
+        },
+        {
+            "type": "folder",
+            "name": "admin"
+        },
+        {
+            "type": "folder",
+            "name": "assets"
+        },
+        {
+            "type": "file",
+            "name": "composer.json",
+            "size": 63,
+            "hash": "583602b27182667e976aa426c05f6ab8352b6d0f29adce60baf77118969fa08c"
+        },
+        {
+            "type": "file",
+            "name": "composer.lock",
+            "size": 21852,
+            "hash": "3101a823facac836d079eaa8d584521cbcf29d319e5a6b2b4af1638b71a01a11"
+        },
+        {
+            "type": "folder",
+            "name": "includes"
+        },
+        {
+            "type": "file",
+            "name": "index.php",
+            "size": 36,
+            "hash": "921fd4a5168b8b28afe124c78d28b2fb4face63232b9483ef88380810a1fae69"
+        },
+        {
+            "type": "file",
+            "name": "package-lock.json",
+            "size": 12041,
+            "hash": "388170ed34fe57215576d0e9ddfc8fac6d6d48db6156268e4cfd873cd8d7460f"
+        },
+        {
+            "type": "file",
+            "name": "package.json",
+            "size": 80,
+            "hash": "1548e44ca9ccb8decae8d23e66f044efb884582f4b19e744a3e6fcc1b44d6b93"
+        },
+        {
+            "type": "folder",
+            "name": "views"
+        },
+        {
+            "type": "file",
+            "name": ".vscode/settings.json",
+            "size": 233,
+            "hash": "597bc5b9f085256adb80f4449e20dc05ab1c858ccfe97fa671e7931d000bc8e9"
+        },
+        {
+            "type": "folder",
+            "name": "admin/app"
+        },
+        {
+            "type": "file",
+            "name": "admin/index.php",
+            "size": 36,
+            "hash": "921fd4a5168b8b28afe124c78d28b2fb4face63232b9483ef88380810a1fae69"
+        },
+        {
+            "type": "folder",
+            "name": "admin/views"
+        },
+        {
+            "type": "folder",
+            "name": "assets/images"
+        },
+        {
+            "type": "folder",
+            "name": "assets/styles"
+        },
+        {
+            "type": "file",
+            "name": "includes/ad-content.php",
+            "size": 883,
+            "hash": "f498e7e41ef987469e248de1f91ba2576d72a4c2d554fc49299ce53ab48d783e"
+        },
+        {
+            "type": "file",
+            "name": "includes/config.php",
+            "size": 0,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+            "type": "file",
+            "name": "includes/header.php",
+            "size": 551,
+            "hash": "b44a98a56803f37f7eaceb75444273dc4cd301d4b71da2bb752a015b70e971fe"
+        },
+        {
+            "type": "file",
+            "name": "includes/footer.php",
+            "size": 625,
+            "hash": "39226e28202e0abd6091f68de8209910a7e3173829ac7fe002a5e67892bb583f"
+        },
+        {
+            "type": "file",
+            "name": "includes/movie-list.php",
+            "size": 1483,
+            "hash": "44729b1e512951ac2d0ee2f3fbe286b7456a03b9d09776834533103dedfe8917"
+        },
+        {
+            "type": "file",
+            "name": "includes/navbar.php",
+            "size": 2576,
+            "hash": "f4e308646abaf0bb04c7a8971d0bbfe335ba78a227f7a6cbf9847af1330b4b61"
+        },
+        {
+            "type": "file",
+            "name": "includes/pagination.php",
+            "size": 1721,
+            "hash": "9bd9787fe77b2a3f5191b766f51834d09d8cdc11514ea69e22409f82fd08fd25"
+        },
+        {
+            "type": "file",
+            "name": "includes/scripts.php",
+            "size": 556,
+            "hash": "ce7e67d84b053db950d42dab550ad83587f880e31a8b14dfdb6eef7f3ac52cc9"
+        },
+        {
+            "type": "file",
+            "name": "includes/utils.php",
+            "size": 3516,
+            "hash": "f28ab1797c764d772b5806043412e80b1a45cdc9cefab2a1203fb70d1179abd7"
+        },
+        {
+            "type": "file",
+            "name": "views/index.php.example",
+            "size": 405,
+            "hash": "c524663e431368e65831b8d855661b10cacd94f432741eb5aba523c892c604fa"
+        },
+        {
+            "type": "file",
+            "name": "views/index.php",
+            "size": 2181,
+            "hash": "f31f9e3c16c752c6826744fea3d1ac7b4f9f4fbf2a7a9987a6efb0eb9e1728d3"
+        },
+        {
+            "type": "file",
+            "name": "views/movies.php",
+            "size": 1272,
+            "hash": "fdbf97a72ee3dd08445cf558dff6b56b917ee286cbbb45362dde4557275b1f45"
+        },
+        {
+            "type": "file",
+            "name": "views/search.php",
+            "size": 4056,
+            "hash": "1cb320effeed2ea2860a97d1d13434bca228804e63dce87a4d8d498f7601de9d"
+        },
+        {
+            "type": "file",
+            "name": "views/watch.php",
+            "size": 6494,
+            "hash": "4c087e7a67f65f5d88abfb9fd5d8b9f66444f71353da7e901b37c80595506472"
+        },
+        {
+            "type": "file",
+            "name": "admin/app/login.php",
+            "size": 648,
+            "hash": "a282abc6fbb6c3380599902a52c0f17c9ae7f9e014dc0866d2580e252b246b8d"
+        },
+        {
+            "type": "file",
+            "name": "admin/views/dashboard.php",
+            "size": 3920,
+            "hash": "8a3b1c40f3a52acfce9be4c0d4e2989259483f78bb20c65cb71789504641fec8"
+        },
+        {
+            "type": "file",
+            "name": "admin/views/index.php",
+            "size": 1890,
+            "hash": "abebdaaedae87a548b83b35390c125bf3e195d41c16c1a81aeb738da4c3c8525"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/hero-bg.jpg",
+            "size": 721602,
+            "hash": "bf5a54e2e86087d5fd47e78a8285600a6ca77dfdd2edd4bbdf4f7c47f664fa80"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/icon.png",
+            "size": 2581,
+            "hash": "e0e7f88435b8086bf16f1c2f6d63f177fddb5781b142779407d084a0893f2aa8"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/logo-icon.png",
+            "size": 6347,
+            "hash": "d4e44aed7de557fec48f9e8e9466e997e35ed4a2ad5fee39a4b94e60b697f5d1"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/logo-lg.png",
+            "size": 6999,
+            "hash": "b4ec49915688156ac50bf9896420e36468a6b674acbf2a5214f87b69611d41b7"
+        },
+        {
+            "type": "file",
+            "name": "assets/images/logo.png",
+            "size": 3520,
+            "hash": "f86784145f31ecc082366951321927419029bcf43d55165caf5b13451b9158bf"
+        },
+        {
+            "type": "folder",
+            "name": "assets/styles/css"
+        },
+        {
+            "type": "folder",
+            "name": "assets/styles/scss"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/css/main.css",
+            "size": 3836,
+            "hash": "d7133a423cdd19efc97da7ea7c301306c314800c1a4444ce86d6d9b0308867ca"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/css/main.css.map",
+            "size": 1795,
+            "hash": "3aa0c4369064484da58b767b63e23e1b6ee6ff625afdc5e74f6a499eec90c333"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/scss/_components.scss",
+            "size": 1458,
+            "hash": "db06bf6f34a1ad8b3265239cd0dc7c55ac1d78326c83b1c6efcdc0910e2ea75d"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/scss/_lg.scss",
+            "size": 2120,
+            "hash": "b779ca08a1c5d2d4eb73d83ffa85e93f4ee629f3184657c8473dba547cae5830"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/scss/_sm.scss",
+            "size": 317,
+            "hash": "8380381cc87bd90d623c5c721d2bcbd628a6690c69de60bd5df75951df4732a9"
+        },
+        {
+            "type": "file",
+            "name": "assets/styles/scss/main.scss",
+            "size": 169,
+            "hash": "53aa3a9cb3a0c7c769c6832274bd1697c0c30b62f16d050823917ed258c83e17"
+        }
+    ]
+}
