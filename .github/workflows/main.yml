@@ -24,13 +24,6 @@ jobs:
       run: |
         npm install # or yarn install
 
-    - name: install Composer Packages
-      uses: php-actions/composer@v6
-
-    - name: Install Composer packages
-      run: |
-        composer install
-
     - name: Deploy to FTP server
       uses: SamKirkland/FTP-Deploy-Action@4.3.0
       with:
