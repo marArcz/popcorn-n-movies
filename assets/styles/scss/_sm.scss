@@ -1,0 +1,15 @@
+@media screen and (max-width:768px) {
+    .hero{
+        min-height: 40vh !important;
+        height: max-content !important;
+    }
+    .text-title{
+        font-size: 1.6rem !important;
+    }
+    .text-tagline{
+        font-size: 1.3rem !important;
+    }
+    .video-wrapper{
+        height: 35vh !important;
+    }
+}
