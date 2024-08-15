@@ -5,9 +5,9 @@
     <?php
     $ads = [
         'https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad',
-        'https://fbwatch.moviesx.me/lcHPYyaZY/61579754',
-        'https://shrtq.com/support-us/61579754',
-        'https://cutpu.com/support-us/61579754',
+        // 'https://fbwatch.moviesx.me/lcHPYyaZY/61579754',
+        // 'https://shrtq.com/support-us/61579754',
+        // 'https://cutpu.com/support-us/61579754',
         // 'https://urlef.com/support-us/61579754',
         // 'https://watch.moviesx.me/support-us/61579754',
         // 'https://support-us.moviesx.me/OOrj/61579754',
