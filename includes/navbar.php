@@ -3,13 +3,13 @@
         <a class="navbar-brand" href="index.php">
             <img src="../assets/images/logo-lg.png" width="140" class="img-fluid" alt="">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="d-lg-none btn btn-dark d-flex justify-content-center align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bx bx-menu bx-sm text-danger"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link"  href="index.php">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="movies.php?title=Now Playing&category=now_playing">Now Playing</a>
@@ -32,20 +32,22 @@
     </div>
 </nav>
 <div class="w-100 bg-body-secondary py-2 ">
-    <div class="container-lg">
-        <div class="d-flex gap-2">
-            <button class="btn btn-dark btn-sm d-block"><</button>
-            <ul class="genre-nav flex-1">
-                <?php
-                $genres = getGenres('movie');
-                ?>
-                <?php foreach ($genres['genres'] as $genre): ?>
-                    <li class="nav-item">
-                        <a class="nav-link link-light active" href="movies.php?title=<?= $genre['name']. ' Movies' ?>&with_genres=<?= $genre['id'] ?>"><?= $genre['name'] ?></a>
-                    </li>
-                <?php endforeach ?>
-            </ul>
-            <button class="btn btn-dark btn-sm d-block">></button>
-        </div>
+    <div class="container-lg d-flex gap-2 w-full">
+        <button class="btn btn-dark btn-sm d-block">
+            <i class="bx bx-chevron-left"></i>
+        </button>
+        <ul class="genre-nav flex-1">
+            <?php
+            $genres = getGenres('movie');
+            ?>
+            <?php foreach ($genres['genres'] as $genre): ?>
+                <li class="nav-item">
+                    <a class="nav-link link-light active" href="movies.php?title=<?= $genre['name'] . ' Movies' ?>&with_genres=<?= $genre['id'] ?>"><?= $genre['name'] ?></a>
+                </li>
+            <?php endforeach ?>
+        </ul>
+        <button class="btn btn-dark btn-sm d-block">
+            <i class="bx bx-chevron-right"></i>
+        </button>
     </div>
 </div>
