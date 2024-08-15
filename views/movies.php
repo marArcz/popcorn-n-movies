@@ -47,6 +47,8 @@ $totalResults = $movies['total_results'];
     $title = $_GET['title'];
     $query_params = '?' . http_build_query($params);
     include_once '../includes/pagination.php';
+    require_once '../includes/scripts.php';
+    include_once '../includes/footer.php';
     ?>
 </body>
 
