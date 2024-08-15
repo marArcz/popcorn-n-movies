@@ -81,12 +81,12 @@ $addToWatch($movieId . '__' . $movie['title']);
                         <?php endif ?>
                     </div>
                     <div class="col-md-2">
-                        <a target="_blank" class="btn btn-danger col-12" href="https://paypou.com/YmdBZRrv/61579754">Stream in HD</a>
-                        <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://paypou.com/YmdBZRrv/61579754">Download in HD</a>
+                        <a target="_blank" class="btn btn-danger col-12" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Stream in HD</a>
+                        <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Download in HD</a>
                         <p class="mt-3 mb-0 text-sm text-white-50">
                             <small>Please Support us by clicking the ad below <i class=" text-danger bx bxs-heart"></i></small>
                         </p>
-                        <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://paypou.com/YmdBZRrv/61579754">Ad Content <i class=" bx bx-tab"></i></a>
+                        <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Ad Content <i class=" bx bx-tab"></i></a>
                     </div>
                 </div>
                 <?php if ($movie['credits']['cast']): ?>
