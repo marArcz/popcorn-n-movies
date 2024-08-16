@@ -95,7 +95,7 @@
 }
 
 .movie-card {
-  width: 100%;
+  width: 100% !important;
   position: relative;
 }
 .movie-card .rating {
@@ -125,7 +125,7 @@
   text-wrap: nowrap;
 }
 .movie-card__overlay {
-  background: linear-gradient(to bottom, rgba(118, 30, 30, 0), rgba(118, 30, 30, 0.518) 50%);
+  background: linear-gradient(to bottom, rgba(212, 179, 30, 0), rgba(212, 179, 30, 0.583) 50%);
   top: 0;
   left: 0;
   width: 100%;
@@ -168,6 +168,16 @@
   -o-object-position: top;
      object-position: top;
   border-radius: 50%;
+}
+
+.hor-scroll-list {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  gap: 10px;
+}
+.hor-scroll-list .movie-card {
+  width: 200px !important;
 }
 
 @media screen and (max-width: 768px) {
