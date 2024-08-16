@@ -8,10 +8,10 @@
         'https://fbwatch.moviesx.me/lcHPYyaZY/61579754',
         'https://shrtq.com/support-us/61579754',
         'https://cutpu.com/support-us/61579754',
-        // 'https://urlef.com/support-us/61579754',
-        // 'https://watch.moviesx.me/support-us/61579754',
-        // 'https://support-us.moviesx.me/OOrj/61579754',
-        // 'https://paypou.com/download-movie/61579754'
+        'https://urlef.com/support-us/61579754',
+        'https://watch.moviesx.me/support-us/61579754',
+        'https://support-us.moviesx.me/OOrj/61579754',
+        'https://paypou.com/download-movie/61579754'
     ];
     ?>
     <a target="_blank" id="ad-content" class="ad-content btn btn-danger col-12 mt-2" href="<?= $ads[rand(0, count($ads) - 1)] ?>">
