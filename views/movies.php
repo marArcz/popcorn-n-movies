@@ -14,7 +14,7 @@ if (isset($params['category'])) {
     $movies = discoverMovies($params);
 }
 
-$totalPages = 500;
+$totalPages = $movies['total_pages'];
 $totalResults = $movies['total_results'];
 
 
