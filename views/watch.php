@@ -26,6 +26,7 @@ $addToWatch($movieId . '__' . $movie['title']);
     <section class="">
         <div class="video-wrapper bg-secondary bg-opacity-50">
             <iframe
+                referrerpolicy="origin"
                 src="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
                 class="object-fit-contain w-100 position-absolute"
                 style="height: 100%;"
