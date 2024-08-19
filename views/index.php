@@ -52,7 +52,7 @@ require_once '../includes/utils.php';
                 <h3 class="text-danger">Trending 🔥</h3>
                 <a href="movies.php?title=Trending Movies&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
             </div>
-            <?php require '../includes/hor-scroll-movie-list.php'; ?>
+            <?php require '../includes/movie-list.php'; ?>
         </div>
         <!-- PH movies -->
         <div class="mt-5 mb-1">
@@ -65,9 +65,9 @@ require_once '../includes/utils.php';
             ?>
             <div class="d-flex align-items-center">
                 <h3 class="text-danger">PH Movies</h3>
-                <a href="movies.php?title=Top movies this year&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
+                <a href="movies.php?title=Philippine Movies&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
             </div>
-            <?php require '../includes/hor-scroll-movie-list.php'; ?>
+            <?php require '../includes/movie-list.php'; ?>
         </div>
         <!-- top movies -->
         <div class="mt-5 mb-1">
@@ -86,7 +86,7 @@ require_once '../includes/utils.php';
                 <h3 class="text-danger">Top Movies This Year</h3>
                 <a href="movies.php?title=Top movies this year&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
             </div>
-            <?php require '../includes/hor-scroll-movie-list.php'; ?>
+            <?php require '../includes/movie-list.php'; ?>
         </div>
         <!-- top movies -->
         <div class="mt-5 mb-1">
@@ -103,7 +103,7 @@ require_once '../includes/utils.php';
                 <h3 class="text-danger">Animated Films</h3>
                 <a href="movies.php?title=Top movies this year&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
             </div>
-            <?php require '../includes/hor-scroll-movie-list.php'; ?>
+            <?php require '../includes/movie-list.php'; ?>
         </div>
 
     </section>
