@@ -25,6 +25,16 @@ $addToWatch($movieId . '__' . $movie['title']);
     <!-- content -->
     <section class="">
         <div class="video-wrapper bg-secondary bg-opacity-50">
+        <div id="video-player-overlay" class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+                <div class="w-100 h-100 position-relative">
+                    <div id="play-video-overlay" class=" play-video-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-25 z-3">
+                        <button data-ads="https://paypou.com/popcornandmovies-recommend/61579754" class="btn outline-none border-0" type="button" id="btn-play">
+                            <i class="bx bx-play"></i>
+                        </button>
+                    </div>
+                    <img src="<?= getTmdbImage($movie['backdrop_path']) ?>" class=" object-fit-cover position-absolute w-100 h-100 z-2" alt="">
+                </div>
+            </div>
             <iframe
                 referrerpolicy="origin"
                 src="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
