@@ -37,7 +37,8 @@ $addToWatch($movieId . '__' . $movie['title']);
             </div>
             <iframe
                 referrerpolicy="origin"
-                src="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
+                 src=""
+                data-videosrc="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
                 class="object-fit-contain w-100 position-absolute"
                 style="height: 100%;"
                 allowfullscreen
