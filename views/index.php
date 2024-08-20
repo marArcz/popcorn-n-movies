@@ -16,7 +16,7 @@ require_once '../includes/utils.php';
     <section class="hero w-100">
         <div class="backdrop-overlay"></div>
         <img src="../assets/images/hero-bg.jpg" alt="" class="hero__img">
-        <div class="hero__content d-flex align-items-center py-lg-5 py-2">
+        <div class="hero__content d-flex align-items-end py-lg-5 py-2">
             <div class="container-lg">
                 <h1 class="text-title fw-semibold">Get your popcorn and choose your movie</h1>
                 <p class="text-tagline fw-medium text-white-50">Enjoy free movies online without limit</p>
