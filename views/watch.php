@@ -25,7 +25,7 @@ $addToWatch($movieId . '__' . $movie['title']);
     <!-- content -->
     <section class="">
         <div class="video-wrapper bg-secondary bg-opacity-50">
-        <div id="video-player-overlay" class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
+            <div id="video-player-overlay" class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
                 <div class="w-100 h-100 position-relative">
                     <div id="play-video-overlay" class=" play-video-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-25 z-3">
                         <button data-ads="https://paypou.com/popcornandmovies-recommend/61579754" class="btn outline-none border-0" type="button" id="btn-play">
@@ -37,7 +37,8 @@ $addToWatch($movieId . '__' . $movie['title']);
             </div>
             <iframe
                 referrerpolicy="origin"
-                 src=""
+                src=""
+                id="video-iframe"
                 data-videosrc="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
                 class="object-fit-contain w-100 position-absolute"
                 style="height: 100%;"
