@@ -5,7 +5,7 @@
             <div class="movie-card">
                 <a title="<?= $tvShow['name'] ?>" href="watch-series.php?m=<?= $tvShow['id'] ?>" class="text-light text-decoration-none">
                     <div class="position-relative">
-                        <img height="300" loading="lazy" class="tvShow-card__img" src="<?= getTmdbImage($tvShow['poster_path'], 'w300') ?>" alt="<?= $tvShow['name'] ?> poster">
+                        <img height="300" loading="lazy" class="movie-card__img" src="<?= getTmdbImage($tvShow['poster_path'], 'w300') ?>" alt="<?= $tvShow['name'] ?> poster">
                         <div class="movie-card__overlay position-absolute w-100 h-100">
                             <div class="movie-card__play-btn">
                                 <i class="bx bx-play"></i>

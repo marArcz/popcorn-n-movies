@@ -45,7 +45,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
                 'sort_by' => 'popularity.desc',
                 'with_genres' => '16',
                 'with_origin_country' => 'JP',
-                'page' => $page
             ];
             $tvShows = discoverTvShows($params);
             ?>
@@ -63,7 +62,6 @@ $page = isset($_GET['page']) ? $_GET['page'] : 1;
                     'first_air_date_year' => intval(date('Y')),
                     'sort_by' => 'popularity.desc',
                     'with_origin_country' => 'KR',
-                    'page' => $page
                 ];
                 $tvShows = discoverTvShows($params);
                 ?>

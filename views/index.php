@@ -50,6 +50,24 @@ require_once '../includes/utils.php';
             </div>
             <?php require '../includes/movie-list.php'; ?>
         </div>
+        <div class="mt-5">
+            <?php
+            $params = [
+                'first_air_date.gte' => date('Y') . '-01-01',
+                'first_air_date.lte' => date('Y-m-d'),
+                'first_air_date_year' => intval(date('Y')),
+                'sort_by' => 'popularity.desc',
+                'with_genres' => '16',
+                'with_origin_country' => 'JP',
+            ];
+            $tvShows = discoverTvShows($params);
+            ?>
+            <div class="d-flex align-items-center">
+                <h3 class="text-danger">Anime</h3>
+                <a href="series.php?title=Anime Collection&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
+            </div>
+            <?php require '../includes/tv-series-list.php'; ?>
+        </div>
         <!-- PH movies -->
         <div class="mt-5 mb-1">
             <?php
@@ -65,33 +83,14 @@ require_once '../includes/utils.php';
             </div>
             <?php require '../includes/movie-list.php'; ?>
         </div>
-        <!-- top movies -->
-        <div class="mt-5 mb-1">
-            <?php
-            $params = [
-                'primary_release_year' => date('Y'),
-                'primary_release_date.gte' => date('2024-01-01'),
-                'primary_release_date.lte' => date('Y-m-d'),
-                'vote_average.gte' => 7.0,
-                'vote_count.gte' => 1000,
-                'sort_by' => 'vote_count.desc',
-            ];
-            $movies = discoverMovies($params);
-            ?>
-            <div class="d-flex align-items-center">
-                <h3 class="text-danger">Top Movies This Year</h3>
-                <a href="movies.php?title=Top movies this year&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
-            </div>
-            <?php require '../includes/movie-list.php'; ?>
-        </div>
-        <!-- top movies -->
+        <!-- animated movies -->
         <div class="mt-5 mb-1">
             <?php
             $params = [
                 'sort_by' => 'vote_count.desc',
                 'vote_average.gte' => 7.0,
                 'vote_count.gte' => 1000,
-                'with_genres'=>'16'
+                'with_genres' => '16'
             ];
             $movies = discoverMovies($params);
             ?>
