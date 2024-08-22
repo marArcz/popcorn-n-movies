@@ -31,6 +31,10 @@ require_once '../includes/utils.php';
     </section>
     <section>
         <div class="container-lg py-2 w-100">
+            <div class="alert alert-light mb-3 mt-4 fs-5">
+                <strong class="">Great news!</strong> You can also now watch a wide selection of <strong>TV Series</strong> on our site including <strong>anime</strong>, <strong>korean dramas</strong>, etc.
+                <a href="tv-series.php" class="link-warning">See here!</a>
+            </div>
             <?php include '../includes/ad-content.php' ?>
         </div>
     </section>
