@@ -49,9 +49,23 @@ function discoverMovies(array $options)
     return json_decode((string)$response->getBody(), true);
 }
 
+function discoverTvShows(array $options)
+{
+    $params = http_build_query($options);
+    $response = makeRequest("/discover/tv?include_adult=false&include_video=false&" . $params);
+    return json_decode((string)$response->getBody(), true);
+}
+
 function findMovie(string $query, int $page = 1): array
 {
     $response = makeRequest("/search/movie?query=$query&include_adult=false&language=en-US&page=$page");
+    return json_decode((string)$response->getBody(), true);
+}
+
+
+function findTvShow(string $query, int $page = 1): array
+{
+    $response = makeRequest("/search/tv?query=$query&include_adult=false&page=$page");
     return json_decode((string)$response->getBody(), true);
 }
 
@@ -59,6 +73,22 @@ function getMovie(string $id): array
 {
 
     $response = makeRequest("/movie/$id?append_to_response=credits");
+
+    return json_decode((string)$response->getBody(), true);
+}
+
+function getSeason(string $id,string $season): array
+{
+
+    $response = makeRequest("/tv/$id/season/$season");
+
+    return json_decode((string)$response->getBody(), true);
+}
+
+function getSeries(string $id): array
+{
+
+    $response = makeRequest("/tv/$id?append_to_response=credits");
 
     return json_decode((string)$response->getBody(), true);
 }

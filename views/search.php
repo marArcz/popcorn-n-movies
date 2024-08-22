@@ -1,6 +1,8 @@
 <?php
 require_once '../includes/utils.php';
 
+$type = isset($_GET['type']) ? $_GET['type'] : 'movies';
+
 ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
@@ -19,7 +21,7 @@ require_once '../includes/utils.php';
         <div class="container-lg">
             <div class=" mt-3">
                 <h4 class="mb-3 text-warning">
-                    <span>Movie Search</span>
+                    <span> Search</span>
                     <i class="bx bx-search ms-1 fs-5"></i>
                 </h4>
                 <form class="d-flex" action="search.php" role="search">
@@ -27,44 +29,36 @@ require_once '../includes/utils.php';
                     <!-- <button class="btn btn-outline-danger" type="submit">Search</button> -->
                 </form>
             </div>
-
             <div class="mt-4">
+                <p class="fs-5 text-center mb-1 text-white-50">Results for <span class="text-danger-emphasis">"<?= $_GET['keyword'] ?>":</span></p>
+                <ul class="nav nav-underline justify-content-center mt-2 mb-4">
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 link-warning <?= $type === 'movies'?'active':'' ?>" aria-current="page" href="?keyword=<?= $_GET['keyword'] ?>&type=movies">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fs-5 link-warning <?= $type === 'series'?'active':'' ?>" href="?keyword=<?= $_GET['keyword'] ?>&type=series">TV Series</a>
+                    </li>
+                </ul>
                 <?php if (isset($_GET['keyword'])): ?>
-                    <?php
-                    $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                    $movies = findMovie($_GET['keyword'], $page);
-                    $totalResults = $movies['total_results'];
-                    $totalPages = $movies['total_pages'];
-                    ?>
-                    <p class="fs-5 mb-1 text-white-50">Results for <span class="text-danger-emphasis">"<?= $_GET['keyword'] ?>":</span></p>
-                    <p class="text-white-50"><?= number_format($totalResults) ?> movies found.</p>
-                    <div class="row mt-3 border-box gx-3 gy-3 ">
-                        <?php foreach ($movies['results'] as $key => $movie): ?>
-                            <?php if (!$movie['poster_path']) continue ?>
-                            <div class="col-lg-2 col-md-4">
-                                <div class="movie-card">
-                                    <a title="<?= $movie['title'] ?>" href="watch.php?m=<?= $movie['id'] ?>" class="text-light text-decoration-none">
-                                        <div class="position-relative">
-                                            <img loading="lazy" class="movie-card__img" src="<?= getTmdbImage($movie['poster_path'], 'w300') ?>" alt="<?= $movie['title'] ?> poster">
-                                            <div class="movie-card__overlay position-absolute w-100 h-100">
-                                                <div class="movie-card__play-btn">
-                                                    <i class="bx bx-play"></i>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="rating bg-warning rounded text-dark fw-bold z-2 shadow">
-                                            <i class="bx bxs-star text-white"></i>
-                                            <span><?= $movie['vote_average'] ?></span>
-                                        </div>
-                                        <p class="text-sm mt-2 mb-0 text-white-50">
-                                            <?= date('Y', strtotime($movie['release_date'])) ?>
-                                        </p>
-                                        <p class="movie-card__title mt-1 fs-6 "><?= $movie['title'] ?></p>
-                                    </a>
-                                </div>
-                            </div>
-                        <?php endforeach; ?>
-                    </div>
+                    <?php if ($type === 'series'): ?>
+                        <?php
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $animes = findTvShow($_GET['keyword'], $page);
+                        $totalResults = $animes['total_results'];
+                        $totalPages = $animes['total_pages'];
+                        ?>
+                        <p class="mb-1"><?= $totalResults ?> TV Series found.</p>
+                        <?php require '../includes/anime-list.php' ?>
+                    <?php else: ?>
+                        <?php
+                        $page = isset($_GET['page']) ? $_GET['page'] : 1;
+                        $movies = findMovie($_GET['keyword'], $page);
+                        $totalResults = $movies['total_results'];
+                        $totalPages = $movies['total_pages'];
+                        ?>
+                        <p class="mb-1"><?= $totalResults ?> movies found.</p>
+                        <?php require '../includes/movie-list.php' ?>
+                    <?php endif ?>
                 <?php endif ?>
             </div>
         </div>

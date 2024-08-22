@@ -14,7 +14,9 @@ require_once '../../conn/conn.php';
 </head>
 
 <body>
-    <section class="py-5">
+    <?php include_once '../includes/navbar.php' ?>
+    <section class="py-3">
+
         <div class="container">
             <h3>Dashboard</h3>
 

@@ -8,14 +8,10 @@ if (!isset($_GET['title'])) {
 $params = $_GET;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
-if (isset($params['category'])) {
-    $movies = getMovieList($params['category']);
-} else {
-    $movies = discoverMovies($params);
-}
+$tvShows = discoverTvShows($params);
 
-$totalPages = $movies['total_pages'];
-$totalResults = $movies['total_results'];
+$totalPages = $tvShows['total_pages'];
+$totalResults = $tvShows['total_results'];
 
 
 ?>
@@ -25,7 +21,7 @@ $totalResults = $movies['total_results'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcorn and Movies - Watch movies online for free</title>
+    <title>Popcorn and Movies - Watch TV Shows online for free</title>
     <?php include_once '../includes/header.php' ?>
 </head>
 
@@ -35,10 +31,9 @@ $totalResults = $movies['total_results'];
     <section class="py-3">
         <div class="container-lg">
             <h1 class="fs-3 mt-3 text-danger"><?= $_GET['title'] ?></h1>
-            <p><?= number_format($totalResults) ?> movies found.</p>
             <div class="mt-2">
                 <?php
-                require '../includes/movie-list.php';
+                require '../includes/tv-series-list.php';
                 ?>
             </div>
         </div>

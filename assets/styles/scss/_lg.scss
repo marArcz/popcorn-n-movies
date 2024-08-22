@@ -61,7 +61,7 @@
 
     &__overlay {
         // background: linear-gradient(to bottom,rgba(118, 30, 30, 0),rgba(118, 30, 30, 0.518) 50%);   
-        background: linear-gradient(to bottom,rgba(212, 179, 30, 0),rgba(212, 179, 30, 0.583) 50%);   
+        background: linear-gradient(to bottom, rgba(212, 179, 30, 0), rgba(212, 179, 30, 0.583) 50%);
         top: 0;
         left: 0;
         width: 100%;
@@ -81,15 +81,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-            i{
-                color:rgb(255, 255, 255); ;
-                font-size: 2rem;
-            }
+
+        i {
+            color: rgb(255, 255, 255);
+            ;
+            font-size: 2rem;
+        }
     }
 
     // hovered
     &:hover {
-        .movie-card__overlay{
+        .movie-card__overlay {
             opacity: 1;
         }
     }
@@ -112,12 +114,31 @@
     }
 }
 
-.hor-scroll-list{
+.hor-scroll-list {
     display: flex;
     width: 100%;
     overflow-x: auto;
     gap: 10px;
-    .movie-card{
+
+    .movie-card {
         width: 200px !important;
     }
 }
+
+.episode-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.season-btn {
+    min-width: 120px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
