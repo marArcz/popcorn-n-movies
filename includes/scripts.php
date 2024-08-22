@@ -22,4 +22,4 @@
 <script type="text/javascript" src="//greetingsdaydreamlitre.com/bb6d76478a3c0368948ae3c45c57d4d5/invoke.js"></script>
 <script src="../assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/jquery-3.7.1.min.js"></script>
-<script src="../assets/js/main.js?v=2.5"></script>
+<script src="../assets/js/main.js?v=2.7"></script>

@@ -40,7 +40,9 @@ $addToWatch($movieId . '__' . $movie['title']);
                 src=""
                 id="video-iframe"
                 allow="autoplay; encrypted-media"
-                data-videosrc="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
+                data-videosrc2="https://vidsrc.pro/embed/movie/<?= $movieId ?>"
+                data-videosrc1="https://vidsrc.icu/embed/movie/<?= $movieId ?>"
+                data-videosrc3="https://vidsrc.xyz/embed/movie/<?= $movieId ?>"
                 class="object-fit-contain w-100 position-absolute"
                 style="height: 100%;"
                 allowfullscreen
@@ -95,7 +97,13 @@ $addToWatch($movieId . '__' . $movie['title']);
                         <?php endif ?>
                     </div>
                     <div class="col-md-2">
-                        <a target="_blank" class="btn btn-danger col-12" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Stream in HD</a>
+                        <div>
+                            <p class="mb-2">Players</p>
+                            <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12">Player 1</button>
+                            <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button>
+                            <button type="button" data-player="videosrc3" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 3</button>
+                        </div>
+                        <a target="_blank" class="btn btn-danger mt-4 col-12" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Stream in HD</a>
                         <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Download in HD</a>
                         <p class="mt-3 mb-0 text-sm text-white-50">
                             <small>Please Support us by clicking the ad below <i class=" text-danger bx bxs-heart"></i></small>

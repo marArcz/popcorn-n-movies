@@ -43,14 +43,15 @@ $addToWatch($seriesId . '__' . $series['name']);
                 id="video-iframe"
                 referrerpolicy="origin"
                 src=""
-                data-videosrc="https://vidsrc.xyz/embed/tv?tmdb=<?= $seriesId ?>&autoplay=1&season=<?= $seasonNo ?>&episode=<?= $episodeNo ?>&ds_lang=en"
+                data-videosrc1="https://vidsrc.pro/embed/tv/<?= $seriesId ?>/<?= $seasonNo ?>/<?= $episodeNo ?>"
+                data-videosrc2="https://vidsrc.xyz/embed/tv?tmdb=<?= $seriesId ?>&autoplay=1&season=<?= $seasonNo ?>&episode=<?= $episodeNo ?>&ds_lang=en"
                 class="object-fit-contain w-100 position-absolute"
                 style="height: 100%;"
                 allowfullscreen
                 frameborder="0">
             </iframe>
         </div>
-        <div class="container-lg py-4">
+        <div class="container-lg py-3">
             <div class="">
                 <!-- season list -->
                 <div class="d-flex w-100 overflow-x-auto gap-2 py-3">
@@ -58,15 +59,15 @@ $addToWatch($seriesId . '__' . $series['name']);
                         <?php
                         ?>
                         <a title="Season <?= $seasonItem['season_number'] ?> | <?= $seasonItem['name'] ?>" href="?m=<?= $seriesId ?>&s=<?= $seasonItem['season_number'] ?>" class="season-btn btn border <?= $seasonItem['season_number'] == $seasonNo ? 'border-danger text-danger' : 'text-light border-light' ?> text-decoration-none">
-                            <h6 class="mb-0 text-truncate">Season <?= $seasonItem['season_number'] ?> | <?= $seasonItem['name'] ?></h6>
+                            <h6 class="mb-0 text-truncate">Season <?= $seasonItem['season_number'] ?></h6>
                         </a>
                     <?php endforeach ?>
                 </div>
             </div>
-            <div class="mt-4">
+            <div class="mt-3">
                 <div class="row">
                     <div class="col-md-3 d-lg-block d-md-block d-none col-lg-3">
-                        <img class=" img-fluid rounded-3" src="<?= getTmdbImage($season['poster_path']?$season['poster_path']:$series['poster_path'], 'w300') ?>" alt="">
+                        <img class=" img-fluid rounded-3" src="<?= getTmdbImage($season['poster_path'] ? $season['poster_path'] : $series['poster_path'], 'w300') ?>" alt="">
                     </div>
                     <div class="col">
                         <h3 class="mb-1 fs-1"><?= $series['name'] ?></h3>
@@ -123,7 +124,12 @@ $addToWatch($seriesId . '__' . $series['name']);
                         <?php endif ?>
                     </div>
                     <div class="col-md-2">
-                        <a target="_blank" class="btn btn-danger col-12" href="https://paypou.com/watch-in-hd/61579754">Stream in HD</a>
+                        <div>
+                            <p class="mb-2">Players</p>
+                            <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12" >Player 1</button>
+                            <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button>
+                        </div>
+                        <a target="_blank" class="btn btn-danger mt-4 col-12" href="https://paypou.com/watch-in-hd/61579754">Stream in HD</a>
                         <a target="_blank" class="btn btn-danger col-12 mt-2" href="https://urlef.com/download-movie/61579754">Download in HD</a>
                         <p class="mt-3 mb-0 text-sm text-white-50">
                             <small>Please Support us by clicking the ad below <i class=" text-danger bx bxs-heart"></i></small>
