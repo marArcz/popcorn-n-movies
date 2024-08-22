@@ -28,7 +28,7 @@ $addToWatch($movieId . '__' . $movie['title']);
             <div id="video-player-overlay" class="overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center">
                 <div class="w-100 h-100 position-relative">
                     <div id="play-video-overlay" class=" play-video-overlay position-absolute w-100 h-100 d-flex justify-content-center align-items-center bg-dark bg-opacity-25 z-3">
-                        <button data-ads="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad" class="btn outline-none border-0" type="button" id="btn-play">
+                        <button data-ads="https://support-us.moviesx.me/78v/61579754" class="btn outline-none border-0" type="button" id="btn-play">
                             <i class="bx bx-play"></i>
                         </button>
                     </div>
