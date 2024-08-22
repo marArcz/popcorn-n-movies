@@ -5,7 +5,7 @@
     <?php
     $ads = [
         'https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad',
-        'https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad',
+        'https://support-us.moviesx.me/78v/61579754',
     ];
     ?>
     <a target="_blank" id="ad-content" class="ad-content btn btn-danger col-12 mt-2" href="<?= $ads[rand(0, count($ads) - 1)] ?>">
