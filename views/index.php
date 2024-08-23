@@ -58,8 +58,10 @@ require_once '../includes/utils.php';
         <div class="mt-5 mb-1">
             <?php
             $params = [
-                'sort_by' => 'popularity.desc',
+                'sort_by' => 'primary_release_date.desc',
                 'with_companies' => '149142',
+                'primary_release_date.lte' => date('Y-m-d'),
+
             ];
             $movies = discoverMovies($params);
             ?>
