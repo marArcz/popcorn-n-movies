@@ -24,6 +24,7 @@ $(document).ready(function () {
             window.focus();
             $("#video-player-overlay").addClass('d-none')
             $("#video-iframe").attr('src', $("#video-iframe").data('videosrc1'))
+            $("#player-info-alert").removeClass('d-none');
         })
 
         $(".btn-set-player").on('click', function (e) {

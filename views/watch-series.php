@@ -52,6 +52,9 @@ $addToWatch($seriesId . '__' . $series['name']);
             </iframe>
         </div>
         <div class="container-lg py-3">
+            <div id="player-info-alert" class="alert alert-light mb-3 mt-4 fs-6 d-none text-warning-emphasis">
+                If current player is not working you can choose a different player from the list below.
+            </div>
             <div class="">
                 <!-- season list -->
                 <div class="d-flex w-100 overflow-x-auto gap-2 py-3">
@@ -93,7 +96,8 @@ $addToWatch($seriesId . '__' . $series['name']);
                             <p class="my-0 fs-5 text-white-50"><?= $series['overview'] ?></p>
                         </div>
                         <div class="mt-3">
-                            <?php if ($series['first_air_date']): //checks if series is released?>
+                            <?php if ($series['first_air_date']): //checks if series is released
+                            ?>
                                 <p class="text-warning-emphasis fw-medium">AVAILABLE EPISODES</p>
                                 <!-- episode list -->
                                 <div class="d-flex flex-wrap episode-nav gap-2">
@@ -104,7 +108,7 @@ $addToWatch($seriesId . '__' . $series['name']);
                                         <a href="?m=<?= $seriesId ?>&s=<?= $seasonNo ?>&ep=<?= $episode['episode_number'] ?>" class="mb-0 episode-btn btn btn-sm fw-bold btn-<?= $episodeNo == $episode['episode_number'] ? 'light' : 'outline-light' ?>"><?= $episode['episode_number'] ?></a>
                                     <?php endforeach ?>
                                 </div>
-                                <?php else: ?>
+                            <?php else: ?>
                                 <p class="text-warning-emphasis fw-medium">NO AVAILABLE EPISODES YET</p>
 
                             <?php endif ?>
@@ -129,7 +133,7 @@ $addToWatch($seriesId . '__' . $series['name']);
                         <?php endif ?>
                     </div>
                     <div class="col-md-2">
-                        <div>
+                        <div id="players">
                             <p class="mb-2">Players</p>
                             <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12">Player 1</button>
                             <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button>

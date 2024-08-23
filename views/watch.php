@@ -50,6 +50,9 @@ $addToWatch($movieId . '__' . $movie['title']);
             </iframe>
         </div>
         <div class="container-lg py-4">
+            <div id="player-info-alert" class="alert alert-light mb-3 mt-4 fs-6 d-none text-warning-emphasis">
+                If current player is not working you can choose a different player from the list below.
+            </div>
             <div class="">
                 <div class="row">
                     <div class="col-md-3 d-lg-block d-md-block d-none col-lg-3">
@@ -100,7 +103,7 @@ $addToWatch($movieId . '__' . $movie['title']);
                         <div>
                             <p class="mb-2">Players</p>
                             <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12">Player 1</button>
-                            <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button>
+                            <!-- <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button> -->
                             <button type="button" data-player="videosrc3" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 3</button>
                         </div>
                         <a target="_blank" class="btn btn-danger mt-4 col-12" href="https://greetingsdaydreamlitre.com/kc7gf4zjb3?key=259187d8fb693730b6ee7fb17e8139ad">Stream in HD</a>
