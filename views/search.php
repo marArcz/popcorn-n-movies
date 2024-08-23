@@ -43,9 +43,9 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'movies';
                     <?php if ($type === 'series'): ?>
                         <?php
                         $page = isset($_GET['page']) ? $_GET['page'] : 1;
-                        $animes = findTvShow($_GET['keyword'], $page);
-                        $totalResults = $animes['total_results'];
-                        $totalPages = $animes['total_pages'];
+                        $tvShows = findTvShow($_GET['keyword'], $page);
+                        $totalResults = $tvShows['total_results'];
+                        $totalPages = $tvShows['total_pages'];
                         ?>
                         <p class="mb-1"><?= $totalResults ?> TV Series found.</p>
                         <?php require '../includes/tv-series-list.php' ?>
