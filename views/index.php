@@ -90,25 +90,6 @@ require_once '../includes/utils.php';
             </div>
             <?php require '../includes/tv-series-list.php'; ?>
         </div>
-        
-        <!-- animated movies -->
-        <div class="mt-5 mb-1">
-            <?php
-            $params = [
-                'sort_by' => 'vote_count.desc',
-                'vote_average.gte' => 7.0,
-                'vote_count.gte' => 1000,
-                'with_genres' => '16'
-            ];
-            $movies = discoverMovies($params);
-            ?>
-            <div class="d-flex align-items-center">
-                <h3 class="text-danger">Animated Films</h3>
-                <a href="movies.php?title=Top movies this year&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
-            </div>
-            <?php require '../includes/movie-list.php'; ?>
-        </div>
-
     </section>
     <?php
     require_once '../includes/scripts.php';
