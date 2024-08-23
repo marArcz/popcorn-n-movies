@@ -29,7 +29,6 @@
                         'sort_by' => 'primary_release_date.desc',
                         'with_companies' => '149142',
                         'primary_release_date.lte' => date('Y-m-d'),
-
                     ];
                     ?>
                     <a href="movies.php?title=Vivamax Films&<?= http_build_query($link_params) ?>" class="nav-link">Vivamax</a>

@@ -8,6 +8,8 @@ if (!isset($_GET['title'])) {
 $params = $_GET;
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
 
+$params['primary_release_date.lte'] = date('Y-m-d');
+
 if (isset($params['category'])) {
     $movies = getMovieList($params['category']);
 } else {
