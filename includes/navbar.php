@@ -24,13 +24,24 @@
                     <a class="nav-link" href="movies.php?title=PH Movies&with_origin_country=PH">PH Movies</a>
                 </li>
                 <li class="nav-item">
+                    <?php
+                    $link_params = [
+                        'sort_by' => 'primary_release_date.desc',
+                        'with_companies' => '149142',
+                        'primary_release_date.lte' => date('Y-m-d'),
+
+                    ];
+                    ?>
+                    <a href="movies.php?title=Vivamax Films&<?= http_build_query($link_params) ?>" class="nav-link">Vivamax</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="tv-series.php">TV Series</a>
                 </li>
             </ul>
             <form class="d-flex" action="search.php" role="search">
                 <input name="keyword" required class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                 <input type="hidden" name="type" value="<?= isset($type) ? $type : 'movies' ?>">
-            
+
                 <button class="btn btn-outline-danger" type="submit">Search</button>
             </form>
         </div>
