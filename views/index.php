@@ -54,6 +54,22 @@ require_once '../includes/utils.php';
             </div>
             <?php require '../includes/movie-list.php'; ?>
         </div>
+        <!-- PH movies -->
+        <div class="mt-5 mb-1">
+            <?php
+            $params = [
+                'sort_by' => 'popularity.desc',
+                'with_companies' => '149142',
+            ];
+            $movies = discoverMovies($params);
+            ?>
+            <div class="d-flex align-items-center">
+                <h3 class="text-danger">Vivamax Films</h3>
+                <a href="movies.php?title=Vivamax Films&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
+            </div>
+            <?php require '../includes/movie-list.php'; ?>
+        </div>
+        <!-- animes -->
         <div class="mt-5">
             <?php
             $params = [
@@ -72,21 +88,7 @@ require_once '../includes/utils.php';
             </div>
             <?php require '../includes/tv-series-list.php'; ?>
         </div>
-        <!-- PH movies -->
-        <div class="mt-5 mb-1">
-            <?php
-            $params = [
-                'sort_by' => 'popularity.desc',
-                'with_origin_country' => 'PH',
-            ];
-            $movies = discoverMovies($params);
-            ?>
-            <div class="d-flex align-items-center">
-                <h3 class="text-danger">PH Movies</h3>
-                <a href="movies.php?title=Philippine Movies&<?= http_build_query($params) ?>" class="ms-auto link-warning">View all</a>
-            </div>
-            <?php require '../includes/movie-list.php'; ?>
-        </div>
+        
         <!-- animated movies -->
         <div class="mt-5 mb-1">
             <?php
