@@ -48,7 +48,7 @@ $type = isset($_GET['type']) ? $_GET['type'] : 'movies';
                         $totalPages = $animes['total_pages'];
                         ?>
                         <p class="mb-1"><?= $totalResults ?> TV Series found.</p>
-                        <?php require '../includes/anime-list.php' ?>
+                        <?php require '../includes/tv-series-list.php' ?>
                     <?php else: ?>
                         <?php
                         $page = isset($_GET['page']) ? $_GET['page'] : 1;
