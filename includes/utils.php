@@ -132,7 +132,9 @@ function formatRuntime(int $minutes): string
 
 function formatDate($dateString)
 {
-    return date("M d, Y",strtotime($dateString));
+    if($dateString)
+        return date("M d, Y",strtotime($dateString));
+    return "??";
 }
 
 $addToWatch = function ($id) use ($pdo) {

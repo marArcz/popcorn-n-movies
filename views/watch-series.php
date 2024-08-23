@@ -93,16 +93,21 @@ $addToWatch($seriesId . '__' . $series['name']);
                             <p class="my-0 fs-5 text-white-50"><?= $series['overview'] ?></p>
                         </div>
                         <div class="mt-3">
-                            <p class="text-warning-emphasis fw-medium">AVAILABLE EPISODES</p>
-                            <!-- episode list -->
-                            <div class="d-flex flex-wrap episode-nav gap-2">
-                                <?php foreach ($season['episodes'] as $index => $episode): ?>
-                                    <?php if ($episode['episode_number'] > $series['last_episode_to_air']['episode_number']) break; // Stop the loop up to the latest episode aired 
-                                    ?>
-                                    <?php $_GET['ep'] = $episode['episode_number'] ?>
-                                    <a href="?m=<?= $seriesId ?>&s=<?= $seasonNo ?>&ep=<?= $episode['episode_number'] ?>" class="mb-0 episode-btn btn btn-sm fw-bold btn-<?= $episodeNo == $episode['episode_number'] ? 'light' : 'outline-light' ?>"><?= $episode['episode_number'] ?></a>
-                                <?php endforeach ?>
-                            </div>
+                            <?php if ($series['first_air_date']): //checks if series is released?>
+                                <p class="text-warning-emphasis fw-medium">AVAILABLE EPISODES</p>
+                                <!-- episode list -->
+                                <div class="d-flex flex-wrap episode-nav gap-2">
+                                    <?php foreach ($season['episodes'] as $index => $episode): ?>
+                                        <?php if ($episode['episode_number'] > $series['last_episode_to_air']['episode_number']) break; // Stop the loop up to the latest episode aired 
+                                        ?>
+                                        <?php $_GET['ep'] = $episode['episode_number'] ?>
+                                        <a href="?m=<?= $seriesId ?>&s=<?= $seasonNo ?>&ep=<?= $episode['episode_number'] ?>" class="mb-0 episode-btn btn btn-sm fw-bold btn-<?= $episodeNo == $episode['episode_number'] ? 'light' : 'outline-light' ?>"><?= $episode['episode_number'] ?></a>
+                                    <?php endforeach ?>
+                                </div>
+                                <?php else: ?>
+                                <p class="text-warning-emphasis fw-medium">NO AVAILABLE EPISODES YET</p>
+
+                            <?php endif ?>
                         </div>
                         <?php if ($series['credits']['crew']): ?>
                             <div class="mt-3">
@@ -126,7 +131,7 @@ $addToWatch($seriesId . '__' . $series['name']);
                     <div class="col-md-2">
                         <div>
                             <p class="mb-2">Players</p>
-                            <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12" >Player 1</button>
+                            <button type="button" data-player="videosrc1" class="btn-set-player btn btn-light col-12">Player 1</button>
                             <button type="button" data-player="videosrc2" class="btn-set-player btn btn-outline-light mt-2 col-12">Player 2</button>
                         </div>
                         <a target="_blank" class="btn btn-danger mt-4 col-12" href="https://paypou.com/watch-in-hd/61579754">Stream in HD</a>
