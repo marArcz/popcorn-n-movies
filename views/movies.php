@@ -6,17 +6,19 @@ if (!isset($_GET['title'])) {
     exit;
 }
 $params = $_GET;
+// $params['primary_release_date.lte'] = date('Y-m-d');
 $page = isset($_GET['page']) ? $_GET['page'] : 1;
-
-$params['primary_release_date.lte'] = date('Y-m-d');
+$page = $page >= 500? 500 : $page;
+$params['page'] = $page >= 500? 500 : $page;
 
 if (isset($params['category'])) {
-    $movies = getMovieList($params['category']);
+    $movies = getMovieList($params['category'],$page);
 } else {
     $movies = discoverMovies($params);
 }
 
-$totalPages = $movies['total_pages'];
+
+$totalPages = $movies['total_pages'] > 500 ? 500 : $movies['total_pages'];
 $totalResults = $movies['total_results'];
 
 
