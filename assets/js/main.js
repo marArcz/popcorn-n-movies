@@ -20,8 +20,8 @@ $(document).ready(function () {
 
         // })
         $("#btn-play").on('click', function (e) {
-            window.open($(this).data('ads'), '_blank')
-            window.focus();
+            // window.open($(this).data('ads'), '_blank')
+            // window.focus();
             $("#video-player-overlay").addClass('d-none')
             $("#video-iframe").attr('src', $("#video-iframe").data('videosrc1'))
             $("#player-info-alert").removeClass('d-none');
