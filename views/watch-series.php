@@ -10,7 +10,7 @@ $series = getSeries($seriesId);
 $seasonNo = isset($_GET['s']) ? $_GET['s'] : 1;
 
 $season = getSeason($seriesId, $seasonNo);
-$episodeNo = isset($_GET['ep']) ? $_GET['ep'] : $season['episodes'][0]['episode_number'];
+$episodeNo = isset($_GET['ep']) ? $_GET['ep'] : $season['episodes'][0]['episode_number'] ?? '';
 
 $addToWatch($seriesId . '__' . $series['name']);
 ?>
@@ -20,7 +20,7 @@ $addToWatch($seriesId . '__' . $series['name']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcorn and Movies</title>
+    <title><?= $series['name'] ?> - S<?= $seasonNo ?> EP<?= $episodeNo ?></title>
     <?php include_once '../includes/header.php' ?>
 </head>
 

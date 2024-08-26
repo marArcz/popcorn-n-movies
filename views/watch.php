@@ -16,7 +16,7 @@ $addToWatch($movieId . '__' . $movie['title']);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popcorn and Movies</title>
+    <title><?= $movie['title'] . ' - ' . date('Y',strtotime($movie['release_date'])) ?></title>
     <?php include_once '../includes/header.php' ?>
 </head>
 
