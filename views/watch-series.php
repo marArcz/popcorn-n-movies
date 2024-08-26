@@ -175,6 +175,7 @@ $addToWatch($seriesId . '__' . $series['name']);
         </div>
     </section>
     <?php
+    $no_ads = true;
     require_once '../includes/scripts.php';
     include_once '../includes/footer.php';
     ?>

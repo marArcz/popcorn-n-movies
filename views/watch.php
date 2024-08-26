@@ -148,6 +148,7 @@ $addToWatch($movieId . '__' . $movie['title']);
         </div>
     </section>
     <?php
+    $no_ads = true;
     require_once '../includes/scripts.php';
     include_once '../includes/footer.php';
     ?>
