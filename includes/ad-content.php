@@ -1,6 +1,6 @@
 <div class="py-1">
     <p class="mt-3 text-sm text-light mb-0">
-        <i class="bx bxs-heart text-danger"></i> Spare a minute and support us by clicking the ad below
+        <i class="bx bxs-heart text-danger"></i> Spare a minute and support us by opening the ad below
     </p>
     <?php
     $ads = [
