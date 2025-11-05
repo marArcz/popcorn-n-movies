@@ -1,5 +1,5 @@
 <?php if (!isset($no_ads)): ?>
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		atOptions = {
 			'key': 'bb6d76478a3c0368948ae3c45c57d4d5',
 			'format': 'iframe',
@@ -19,7 +19,7 @@
 			'params': {}
 		};
 	</script>
-	<script type="text/javascript" src="//www.highperformanceformat.com/68594368700ac291d72072bd9fff00f3/invoke.js"></script>
+	<script type="text/javascript" src="//www.highperformanceformat.com/68594368700ac291d72072bd9fff00f3/invoke.js"></script> -->
 <?php endif; ?>
 <script src="../assets/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/jquery-3.7.1.min.js"></script>
