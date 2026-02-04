@@ -32,6 +32,9 @@ jobs:
       - name: Install Composer packages
         run: composer install --no-dev --prefer-dist --optimize-autoloader
 
+      - name: Remove .gitignore
+        run: rm .gitignore
+
       - name: Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
